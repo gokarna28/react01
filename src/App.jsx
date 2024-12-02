@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Navbar from "./components/navbar";
+import Update from "./components/Update";
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+      <Navbar/>
       <h1 className='text-2xl'>This is react series</h1>
+      <Update/>
     </>
   )
 }
