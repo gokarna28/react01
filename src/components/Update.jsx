@@ -7,8 +7,6 @@ const Update = () => {
         setCount(count => count + 1);
     }
 
-
-
     //form object 
     const [form, setForm] = useState({
         firstName: 'Gokarna',
