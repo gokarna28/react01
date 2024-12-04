@@ -1,5 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react'
 
+
+
+const person = {
+    name: 'Rajesh sharma',
+    job: 'Software Enginner',
+    imageUrl:'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    theme: {
+        background: 'gray',
+        border: '1px solid black',
+        color: 'white',
+    },
+
+};
+
 const Hook = () => {
     const [count, setCount] = useState(0);
 
@@ -36,11 +50,10 @@ const Hook = () => {
 
     const [number, setNumber] = useState('');
 
-    function cube(num){
+    function cube(num) {
         return Math.pow(num, 3)
     }
-    const result= cube(number)
-
+    const result = cube(number)
 
     return (
         <>
@@ -64,9 +77,20 @@ const Hook = () => {
                 }} />
                 <p>Text is here: {result}</p>
             </div>
+
+            <div style={person.theme}>
+                <h1>{person.name}</h1>
+                <p>{person.job}</p>
+                <img
+                    className="rounded-full"
+                    src={person.imageUrl}
+                    width={100}
+
+                />
+            </div>
+
         </>
-     )
+    )
 }
 
 export default Hook
- 
